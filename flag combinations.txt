@@ -1,0 +1,20 @@
+flag combinations
+
+-name filename                   Case 0       print all files with name filename
+-pname str                       Case 0       print all files containing str in filename
+-type d                          Case -       used to find doc files.
+-type l                          Case -       used to find file links.
+-type m                          Case -       used to find media files.
+-perm                            Case 6       print all files with permissions
+-perm -pname str                 Case 3       print all files having str in filename with permissions
+-perm -name str                  Case 3       print all files having str as filename with permissions
+-time                            Case 5       print all files with time information
+-time -pname str                 Case 2       print all files having str in their filename with time information
+-time -name str                  Case 2       print all files having str file name with time information
+-time -perm                      Case 8       print all files with time information and permissions
+-size (num1 num2)                Case 4,44    print all files with size(in MB) in between num1 <= size <= num2
+-size (num1 num2) -pname str     Case 1,11    print all files with size(in MB) in between num1 <= size <= num2 having str in their file name
+-size (num1 num2) -name str      Case 1,11    print all files with size(in MB) in between num1 <= size <= num2 having str  name
+-size (num1 num2) -time          Case 7,77    print all files with size(in MB) in between num1 <= size <= num2 and time info
+-size (num1 num2) -time -pname   Case 10,100  print all files with size(in MB) in between num1 <= size <= num2 and time info with str in file name
+-size (num1 num2) -time -name    Case 9,99    print all files with size(in MB) in between num1 <= size <= num2 and time info
